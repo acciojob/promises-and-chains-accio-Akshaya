@@ -1,1 +1,33 @@
-/*  your css code here. If applicable */
+body{
+	background-color:blue;
+	font-family:sans-serif;
+	margin:50px;
+}
+
+form{
+	max-width:400px;
+	margin:0 auto;
+}
+.form-group{
+	margin-bottom:15px;
+}
+label{
+	display:block;
+	margin-bottom:5px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+}
+    button:disabled {
+      background-color: #ccc;
+    }
+

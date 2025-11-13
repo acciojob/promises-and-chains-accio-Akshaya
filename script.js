@@ -10,19 +10,21 @@ form.addEventListener('submit',function(e){
 	const age = ageInput.value.trim();
 
 	if(name === '' || age===''){
-		alert("Please enter valid details.")
+		alert("Please enter valid details")
+		return;
 	}
 
 	const checkAge = new Promise((resolve,reject)=>{
 		setTimeout(()=>{
 			if(parseInt(age)>18){
-				resolve(`Welcome, ${name}. You can vote.`)
+				resolve(`Welcome, ${name}. You can vote.`);
 			}else{
-				reject(`Oh sorry ${name}. You aren't old enough`)
+				reject(`Oh sorry ${name}. You aren't old enough`);
 			}
 		},4000)
 	});
 
-	checkAge.then(message=>alert(message))
-	.catch(error=>alert(error));
-})
+	checkAge
+	  .then(msg=>alert(msg))
+	  .catch(err=>alert(err));
+});
